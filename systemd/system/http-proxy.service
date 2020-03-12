@@ -1,0 +1,16 @@
+[Unit]
+Description=HTTP Proxy for SMS Alert Response
+After=syslog.target
+
+[Service]
+ExecStart=/srv/temp_proto/script-files/http-proxy.sh
+# Requires systemd version 211 or newer
+#RuntimeDirectory=
+#Restart=always
+KillSignal=SIGQUIT
+Type=notify
+StandardError=syslog
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=Notify Temperature Service
+
+[Service]
+Type=oneshot
+ExecStart=/srv/temp_proto/script-files/notify-temp.py
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Temperature Notify Timer
+
+[Timer]
+#OnBootSec=1min
+#OnUnitActiveSec=15min
+OnCalendar=*:00/5:30
+
+[Install]
+WantedBy=timers.target

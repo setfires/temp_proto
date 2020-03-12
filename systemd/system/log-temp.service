@@ -1,0 +1,9 @@
+[Unit]
+Description=Temperature Log Service
+
+[Service]
+Type=oneshot
+ExecStart=/srv/proto_temp/script-files/log-temp.py
+
+[Install]
+WantedBy=default.target
